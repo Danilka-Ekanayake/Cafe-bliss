@@ -113,6 +113,11 @@ body {
 .reserve-btn, .Order-btn {
   transition: all 0.3s ease;
 }
+.reserve-btn i,
+.Order-btn i {
+  margin-right: 8px; /* space between icon and text */
+}
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -499,6 +504,7 @@ main {
   background-color: rgba(179, 88, 14, 0.4); /* cream with 40% opacity */
   z-index: -1; /* Behind content */
 }
+
 .Menu-hero h1 {
   font-size: 80px;
   margin-bottom: 20px;
@@ -976,6 +982,131 @@ main {
   color: var(--brown);
   font-size: 20px;
 }
+.Values {
+  background-color: var(--brown);
+  padding: 40px 20px 20px;
+  border-radius: 20px;
+}
+.Values h2{
+  color: var(--cream);
+  font-size: 40px;
+}
+.Values p{
+  color: var(--cream);
+  font-size: 20px;
+}
+.values-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px 10%;
+    }
+
+    .value-card {
+      background: var(--cream);
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .value-card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: var(--brown);
+    }
+
+    .value-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--brown);
+    }
+
+    .value-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--brown);
+    }
+
+/*Our team section*/
+ .team-section {
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .team-section h2 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #6b3e1f; /* Coffee brown */
+      margin-bottom: 10px;
+    }
+
+    .team-section p {
+      color: #000000;
+      margin-bottom: 50px;
+      font-size: 16px;
+    }
+
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .team-card {
+      height: 350px;
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid var(--brown);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      border: 2px solid var(--brown);
+      box-shadow: 0 10px 20px rgba(206, 76, 0, 0.7);
+    }
+
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid var(--brown);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .team-card h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #5a2f12;
+    }
+
+    .team-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #a0522d;
+      margin-bottom: 15px;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
 /*Blog section*/
 .Blog-hero {
   position: relative;
