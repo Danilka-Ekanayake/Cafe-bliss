@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Greeting logic
   if (hours >= 0 && hours < 12) {
-    greetingElement.textContent = "Good Morning! Sir/Mam";
+    greetingElement.textContent = "Good Morning! Sir/ma'am";
   } else if (hours >= 12 && hours < 18) {
-    greetingElement.textContent = "Good Afternoon! Sir/Mam";
+    greetingElement.textContent = "Good Afternoon! Sir/ma'am";
   } else {
-    greetingElement.textContent = "Good Evening! Sir/Mam";
+    greetingElement.textContent = "Good Evening! Sir/ma'am";
   }
   /*customer review*/
   const swiper = new Swiper('.review-swiper', {
