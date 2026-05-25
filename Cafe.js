@@ -1,3 +1,13 @@
+// Loading Screen Handler
+document.addEventListener('DOMContentLoaded', () => {
+  const loadingScreen = document.getElementById('loadingScreen');
+  
+  // Hide loading screen after 2.8s (2s delay + 0.8s fade animation)
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+  }, 2800);
+});
+
 // Example JavaScript: Smooth scroll or interaction enhancements
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
