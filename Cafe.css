@@ -1,8 +1,29 @@
 :root {
-  --brown: #7d3604;
-  --cream: #d4cbba;
-  --black: #000;
-  --white: #fff;
+  --brown: #c96b2a;
+  --cream: #f4e2c8;
+  --black: #07090c;
+  --white: #f8f8f2;
+  --bg: #06070b;
+  --surface: #12151d;
+  --surface-2: #1a1f2c;
+  --surface-3: #232938;
+  --text: #f6efe7;
+  --muted: #b6bac4;
+  --border: rgba(255,255,255,0.12);
+  --accent: #ff9f43;
+  --accent-2: #ffb86b;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+body.light-mode {
+  --bg: #f6efe8;
+  --surface: #fffaf3;
+  --surface-2: #f2e3ce;
+  --surface-3: #ead8bf;
+  --text: #1f180f;
+  --muted: #6f6254;
+  --border: rgba(66, 44, 24, 0.14);
+  --shadow: rgba(92, 58, 25, 0.14);
 }
 
 /* Loading Screen Styles */
@@ -174,6 +195,9 @@
   animation-delay: 0.4s;
 }
 
+.loading-dots span:nth-child(4) {
+  animation-delay: 0.6s;
+}
 @keyframes bounce {
   0%, 80%, 100% {
     opacity: 0.3;
@@ -193,21 +217,34 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--cream);
-  color: var(--black);
+  background: radial-gradient(circle at top left, rgba(255, 159, 67, 0.14), transparent 25%), linear-gradient(135deg, #06070b 0%, #0f1219 50%, #171b25 100%);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.light-mode {
+  background: radial-gradient(circle at top left, rgba(255, 159, 67, 0.18), transparent 24%), linear-gradient(135deg, #f9f1e6 0%, #f4e6d2 55%, #efe0c8 100%);
 }
 
 .header {
-  background-color: rgba(230, 230, 230, 0.8); /* white with 80% opacity */
-  color: var(--brown);
+  background: rgba(10, 12, 16, 0.78);
+  color: var(--cream);
   padding: 1rem 2rem;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
-  backdrop-filter: blur(10px); /* optional: adds blur behind */
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.light-mode .header {
+  background: rgba(255, 250, 243, 0.82);
+  color: var(--brown);
+  box-shadow: 0 10px 30px rgba(92, 58, 25, 0.12);
 }
 
 .logo {
@@ -225,7 +262,7 @@ body {
   height: auto;
 }
 .nav a {
-  color: #000000;
+  color: var(--text);
   margin-left: 1rem;
   text-decoration: none;
   display: inline-block;
@@ -264,32 +301,39 @@ body {
 }
 
 .reserve-btn {
-  background:transparent;
+  background: transparent;
   justify-content: flex-end;
-  color: var(--brown);
+  color: var(--cream);
   padding: 0.5rem 1rem;
-  border:solid 2px #7d3604;
-  border-radius: 8px;
+  border: solid 2px var(--accent);
+  border-radius: 999px;
   cursor: pointer;
 }
-.reserve-btn:hover{
-  transform: scale(1.05);
-  background-color: #ffffff;
-  color: #000000;
+
+body.light-mode .reserve-btn {
+  color: var(--brown);
 }
+
+.reserve-btn:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 159, 67, 0.18);
+  color: var(--cream);
+}
+
 .Order-btn {
-  background-color: var(--brown);
+  background: linear-gradient(135deg, var(--accent), var(--brown));
   justify-content: flex-end;
   color: var(--white);
   padding: 0.5rem 1rem;
-  border:solid 2px #7d3604;
-  border-radius: 8px;
+  border: solid 2px transparent;
+  border-radius: 999px;
   cursor: pointer;
 }
-.Order-btn:hover{
-    background-color: #ad4800;
-    color: var(--white);
-    transform: scale(1.05);
+
+.Order-btn:hover {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: var(--white);
+  transform: scale(1.05);
 }
 .reserve-btn, .Order-btn {
   transition: all 0.3s ease;
@@ -606,7 +650,7 @@ main {
 
 .order h2 {
   text-align: center;
-  color: #7d3604;
+  color: var(--brown);
   margin-bottom: 30px;
 }
 
@@ -655,14 +699,14 @@ main {
 
 #greeting-container h1 {
   font-size: 3rem;
-  color: #000000;
+  color: var(--text);
   animation: fadeIn 2s ease-in-out;
   margin-bottom: 10px;
 }
 
 #date {
   font-size: 1.2rem;
-  color: #000000;
+  color: var(--muted);
 }
 
 /*Menu*/
@@ -1026,11 +1070,11 @@ main {
 .about-us-container h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #000000; 
+  color: var(--text);
 }
 
 .about-us-container h2 span {
-  color: #7d3604;
+  color: var(--brown);
   font-weight: bold;
 }
 
@@ -1064,13 +1108,13 @@ main {
 
 .section-header h2 {
   font-size: 36px;
-  color: #7d3604;
+  color: var(--brown);
   margin-bottom: 10px;
 }
 
 .section-header p {
   font-size: 18px;
-  color: #333;
+  color: var(--muted);
   margin-bottom: 40px;
 }
 
@@ -1225,12 +1269,12 @@ main {
     .team-section h2 {
       font-size: 32px;
       font-weight: bold;
-      color: #6b3e1f; /* Coffee brown */
+      color: var(--brown);
       margin-bottom: 10px;
     }
 
     .team-section p {
-      color: #000000;
+      color: var(--muted);
       margin-bottom: 50px;
       font-size: 16px;
     }
@@ -1273,20 +1317,20 @@ main {
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 5px;
-      color: #5a2f12;
+      color: var(--brown);
     }
 
     .team-card h4 {
       font-size: 15px;
       font-weight: 600;
-      color: #a0522d;
+      color: var(--accent);
       margin-bottom: 15px;
     }
 
     .team-card p {
       font-size: 14px;
       line-height: 1.6;
-      color: #555;
+      color: var(--muted);
     }
 /*Blog section*/
 .Blog-hero {
@@ -1817,18 +1861,18 @@ h2 {
   margin: 80px auto;
   padding: 0 20px;
   line-height: 1.8;
-  color: #333;
+  color: var(--muted);
 }
 
 .privacy h1 {
-  color: #7d3604;
+  color: var(--brown);
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .privacy h2 {
-  color: #7d3604;
+  color: var(--brown);
   margin-top: 30px;
 }
 
@@ -1889,18 +1933,18 @@ h2 {
   margin: 80px auto;
   padding: 0 20px;
   line-height: 1.8;
-  color: #333;
+  color: var(--muted);
 }
 
 .terms h1 {
-  color: #7d3604;
+  color: var(--brown);
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .terms h2 {
-  color: #7d3604;
+  color: var(--brown);
   margin-top: 30px;
 }
 
@@ -2008,8 +2052,6 @@ a.sign-up:hover {
 }
 /*Footer*/
 :root {
-  --brown: #7d3604;
-  --cream: #d4cbba;
   --footer-bg: #7d3604;
   --footer-light: #a14e0c;
   --text-light: #f9f4ef;
@@ -2017,10 +2059,15 @@ a.sign-up:hover {
 }
 
 .footer {
-  background-color: var(--footer-bg);
-  color: var(--text-light);
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  color: var(--text);
   font-family: 'Segoe UI', sans-serif;
   padding: 60px 30px 30px;
+  border-top: 1px solid var(--border);
+}
+
+body.light-mode .footer {
+  color: var(--text);
 }
 
 .footer-container {
@@ -2039,8 +2086,13 @@ a.sign-up:hover {
 
 .footer-col h3,
 .footer-col h2 {
-  color: var(--text-light);
+  color: var(--cream);
   margin-bottom: 15px;
+}
+
+body.light-mode .footer-col h3,
+body.light-mode .footer-col h2 {
+  color: var(--brown);
 }
 
 .footer-col ul {
@@ -2050,41 +2102,54 @@ a.sign-up:hover {
 
 .footer-col ul li {
   margin-bottom: 10px;
-  color: var(--link);
+  color: var(--text);
 }
 
 .footer-col ul li a {
-  color: var(--link);
+  color: var(--text);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: var(--cream);
+  color: var(--accent-2);
+}
+
+body.light-mode .footer-col ul li,
+body.light-mode .footer-col ul li a {
+  color: var(--text);
 }
 
 .about .tagline {
   font-weight: bold;
   margin-top: 5px;
-  color: var(--cream);
+  color: var(--accent-2);
 }
 
 .about .desc {
   margin-top: 15px;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--cream);
+  color: var(--muted);
+}
+
+body.light-mode .about .tagline {
+  color: var(--brown);
+}
+
+body.light-mode .about .desc {
+  color: var(--text);
 }
 
 .socials a {
-  color: var(--link);
+  color: var(--text);
   margin-right: 15px;
   font-size: 1.2rem;
   transition: color 0.3s;
 }
 
 .socials a:hover {
-  color: var(--cream);
+  color: var(--accent-2);
 }
 
 .contact-info li {
@@ -2094,21 +2159,26 @@ a.sign-up:hover {
 
 .contact-info i {
   margin-right: 8px;
-  color: var(--cream);
+  color: var(--accent-2);
 }
 
 .newsletter-form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid var(--footer-light);
-  background-color: transparent;
-  color: var(--text-light);
+  border: 1px solid var(--border);
+  background-color: rgba(255,255,255,0.08);
+  color: var(--text);
   border-radius: 5px;
 }
 
+body.light-mode .newsletter-form input {
+  background-color: rgba(255,255,255,0.8);
+  color: var(--text);
+}
+
 .newsletter-form input::placeholder {
-  color: var(--link);
+  color: var(--muted);
 }
 
 .newsletter-form button {
@@ -2153,12 +2223,171 @@ a.sign-up:hover {
 
 .footer-links a {
   margin-left: 20px;
-  color: var(--link);
+  color: var(--text);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
+  color: var(--accent-2);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: rgba(255,159,67,0.18);
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(201, 107, 42, 0.1);
+  color: var(--brown);
+}
+
+body .about-us-section,
+body .reviews,
+body .blog-preview,
+body .live-music-section,
+body .menu,
+body .gallery,
+body .contact,
+body .reservation,
+body .order,
+body .about,
+body .privacy,
+body .terms,
+body .careers,
+body .blog {
+  background: transparent;
+}
+
+body .about-us-container,
+body .review-card,
+body .menu-item,
+body .blog-card,
+body .team-card,
+body .value-card,
+body .faq-item,
+body .contact-form-wrapper,
+body .contact-details,
+body .Login,
+body .reservation-form,
+body .order-form,
+body .apply-form,
+body .stats-container,
+body .contact-form input,
+body .contact-form textarea,
+body .reservation-form input,
+body .reservation-form textarea,
+body .order-form input,
+body .order-form textarea,
+body .apply-form input,
+body .apply-form textarea,
+body .input-field input[type="email"],
+body .input-field input[type="password"],
+body .newsletter-form input {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: 0 16px 45px var(--shadow);
+}
+
+body .section-header h1,
+body .section-header h2,
+body .section-header h3,
+body .menu h1,
+body .menu h2,
+body .menu h3,
+body .about h2,
+body .contact h2,
+body .reservation h2,
+body .order h2,
+body .Values h2,
+body .team-section h2,
+body .blog-preview h2,
+body .music-content h2,
+body .about-us-container h2,
+body .privacy h1,
+body .privacy h2,
+body .terms h1,
+body .terms h2,
+body .faq-question {
   color: var(--cream);
+}
+
+body.light-mode .section-header h1,
+body.light-mode .section-header h2,
+body.light-mode .section-header h3,
+body.light-mode .menu h1,
+body.light-mode .menu h2,
+body.light-mode .menu h3,
+body.light-mode .about h2,
+body.light-mode .contact h2,
+body.light-mode .reservation h2,
+body.light-mode .order h2,
+body.light-mode .Values h2,
+body.light-mode .team-section h2,
+body.light-mode .blog-preview h2,
+body.light-mode .music-content h2,
+body.light-mode .about-us-container h2,
+body.light-mode .privacy h1,
+body.light-mode .privacy h2,
+body.light-mode .terms h1,
+body.light-mode .terms h2,
+body.light-mode .faq-question {
+  color: var(--brown);
+}
+
+body .section-header p,
+body .menu p,
+body .about-us-container p,
+body .contact-details p,
+body .contact-details li,
+body .privacy p,
+body .terms p,
+body .review-card p,
+body .team-card p,
+body .blog-content p,
+body .music-content p,
+body .about p,
+body .faq-answer {
+  color: var(--muted);
+}
+
+body .hero::before,
+body .Table-hero::before,
+body .Order-hero::before,
+body .Menu-hero::before,
+body .Gallery-hero::before,
+body .About-hero::before,
+body .Blog-hero::before,
+body .live-music-section::before,
+body .Contact-hero::before,
+body .Career-hero::before,
+body .Privacy-hero::before,
+body .Terms-hero::before {
+  background: linear-gradient(135deg, rgba(6, 7, 11, 0.82), rgba(201, 107, 42, 0.25));
+}
+
+body .menu-item:hover,
+body .blog-card:hover,
+body .team-card:hover,
+body .value-card:hover,
+body .about-us-container:hover,
+body .music-image:hover {
+  border-color: var(--accent);
+  box-shadow: 0 18px 45px rgba(255, 159, 67, 0.18);
 }
 

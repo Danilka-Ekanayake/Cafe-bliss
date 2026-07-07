@@ -1,7 +1,44 @@
 // Loading Screen Handler
 document.addEventListener('DOMContentLoaded', () => {
   const loadingScreen = document.getElementById('loadingScreen');
-  
+  const header = document.querySelector('.header');
+
+  if (header && !header.querySelector('.theme-toggle')) {
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'theme-toggle';
+    toggleButton.type = 'button';
+    toggleButton.innerHTML = '<i class="fas fa-moon"></i> <span>Dark</span>';
+
+    const applyTheme = (theme) => {
+      document.body.classList.toggle('light-mode', theme === 'light');
+      const icon = toggleButton.querySelector('i');
+      const label = toggleButton.querySelector('span');
+      if (theme === 'light') {
+        icon.className = 'fas fa-sun';
+        label.textContent = 'Light';
+      } else {
+        icon.className = 'fas fa-moon';
+        label.textContent = 'Dark';
+      }
+      localStorage.setItem('cafe-theme', theme);
+    };
+
+    const savedTheme = localStorage.getItem('cafe-theme') || 'dark';
+    applyTheme(savedTheme);
+
+    toggleButton.addEventListener('click', () => {
+      const nextTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+      applyTheme(nextTheme);
+    });
+
+    const actionWrapper = header.querySelector('div:last-of-type');
+    if (actionWrapper) {
+      header.insertBefore(toggleButton, actionWrapper);
+    } else {
+      header.appendChild(toggleButton);
+    }
+  }
+
   // Hide loading screen after 2.8s (2s delay + 0.8s fade animation)
   setTimeout(() => {
     loadingScreen.classList.add('hidden');
