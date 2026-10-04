@@ -41,32 +41,65 @@
       <p>Enjoy Café Bliss at home</p>
     </div>
   </section>
-<main>
-    <section class="order" data-aos="fade-up">
-      <h2>Place Your Order</h2>
+<main class="order-page">
+  <section class="order-shell" data-aos="fade-up">
+    <div class="order-visual">
+      <div class="order-visual-content">
+        <p class="eyebrow">Fresh from our kitchen</p>
+        <h2>Bring the Café Bliss experience home.</h2>
+        <p>From aromatic coffees to signature desserts, we prepare your favorites with the same care and warmth you enjoy in-store.</p>
+        <ul class="order-features">
+          <li><i class="fas fa-check-circle"></i> Freshly brewed drinks and pastries</li>
+          <li><i class="fas fa-check-circle"></i> Fast delivery and order updates</li>
+          <li><i class="fas fa-check-circle"></i> Custom notes for special requests</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="order-card">
+      <div class="card-header">
+        <span class="pill">Order online</span>
+        <h3>Place your order</h3>
+      </div>
+
       <form class="order-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <div class="field-row">
+          <div class="field-block">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <div class="field-block">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone" required />
+          </div>
+        </div>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+        <div class="field-block">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+        </div>
 
-        <label for="address">Delivery Address</label>
-        <textarea id="address" name="address" placeholder="Your Address" required></textarea>
+        <div class="field-block">
+          <label for="address">Delivery Address</label>
+          <textarea id="address" name="address" placeholder="Your delivery address" required></textarea>
+        </div>
 
-        <label for="items">Your Order</label>
-        <textarea id="items" name="items" placeholder="E.g., 2 Cappuccinos, 1 Chocolate Cake" required></textarea>
+        <div class="field-block">
+          <label for="items">Your Order</label>
+          <textarea id="items" name="items" placeholder="E.g., 2 Cappuccinos, 1 Chocolate Cake" required></textarea>
+        </div>
 
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes" placeholder="Any special requests?"></textarea>
+        <div class="field-block">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" placeholder="Any special requests?"></textarea>
+        </div>
 
         <button type="submit">Place Order</button>
       </form>
-    </section>
-</main>
+    </div>
+  </section>
+</main> 
 <footer class="footer">
   <div class="footer-container">
     <!-- About -->
@@ -104,8 +137,8 @@
       <h3>Contact Info</h3>
       <ul class="contact-info">
         <li><i class="fas fa-map-marker-alt"></i>C/50 Yatigammana,Manikdiwela</li>
-        <li><i class="fab fa-whatsapp"></i>+94 702379757</li>
-        <li><i class="fas fa-phone"></i>+94 702379757/+94 720972648</li>
+        <li><i class="fab fa-whatsapp"></i>+94 740 708 706</li>
+        <li><i class="fas fa-phone"></i>+94 740 708 706/+94 720 972 648</li>
         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=danilkaekanayake@gmail.com&su=Hello&body=I%20visited%20your%20portfolio" class="email" aria-label="Email"><i class="fas fa-envelope"></i>Hello@Cafebliss.com</a></li>
         <li><i class="fas fa-clock"></i> Mon-Fri: 6:00 AM – 9:00 PM<br>Sat-Sun: 7:00 AM – 10:00 PM</li>
       </ul>

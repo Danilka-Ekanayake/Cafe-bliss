@@ -30,35 +30,72 @@
     </div>
   </header>
   <section class="Blog-hero">
-    <div class="hero-content" data-aos="fade-up">
-    <h1 data-aos="fade-up">Café Bliss Blog</h1>
-    <p data-aos="fade-up">Stay updated with our latest stories, coffee tips, and café news!</p>
+    <div class="blog-hero-copy" data-aos="fade-up">
+      <p class="blog-hero-kicker">The Café Bliss Journal</p>
+      <h1>Stories worth<br>slowing down for.</h1>
+      <p>Good coffee has a story. Here are a few of ours.</p>
+      <a href="#journal-stories" class="blog-hero-link">Find your next read <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
     </div>
+    <div class="blog-hero-note" aria-hidden="true"><i class="fas fa-mug-hot"></i><span>BREWED WITH CURIOSITY</span></div>
   </section>
-<section class="blog" data-aos="fade-up">
-  <div class="container">
-    <article class="post">
-      <h2>How to Brew the Perfect Cup at Home</h2>
-      <p class="meta">Posted on July 8, 2025</p>
-      <p>Love our coffee? Here are some barista secrets to help you brew the perfect cup at home. From choosing fresh beans to the right water temperature, we cover it all!</p>
-      <a href="#">Read More</a>
+<main class="blog-journal" id="journal-stories">
+  <div class="journal-heading" data-aos="fade-up">
+    <div>
+      <p class="journal-eyebrow">From our bar to your table</p>
+      <h2>Ideas for the curious coffee drinker.</h2>
+    </div>
+    <p class="journal-intro">Practical brewing notes, the people behind our ingredients, and a taste of what’s in season.</p>
+  </div>
+
+  <article class="featured-story" data-aos="fade-up">
+    <a class="featured-story-image" href="#brew-better" aria-label="Read the home brewing guide">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85" alt="Coffee being prepared for a slow morning brew" loading="lazy">
+      <span class="image-index">01 / THE BREW GUIDE</span>
+    </a>
+    <div class="featured-story-copy">
+      <p class="story-meta"><span>COFFEE, AT HOME</span><span>6 MIN READ</span></p>
+      <h2 id="brew-better">A better cup begins before the first sip.</h2>
+      <p>The little choices matter: freshly ground beans, water just off the boil, and a few quiet minutes to let the coffee bloom. Our baristas share a simple, repeatable way to bring a balanced cup into your own kitchen.</p>
+      <h3>Start with freshness</h3>
+      <p>Choose whole beans and grind only what you need. Keep them sealed away from heat and sunlight, then use a consistent ratio of coffee to water. A kitchen scale helps, but a steady routine matters most.</p>
+      <h3>Give the brew room</h3>
+      <p>Pour slowly and evenly, wetting all the grounds. Let the coffee bloom briefly before continuing. If the cup tastes sharp, grind a little finer or extend the brew; if it tastes heavy or bitter, try a coarser grind.</p>
+      <p class="story-signoff">Good coffee is less about expensive gear and more about paying attention to what’s in your cup.</p>
+    </div>
+  </article>
+
+  <div class="journal-divider" data-aos="fade-up"><span>MORE FROM THE JOURNAL</span><i class="fas fa-asterisk" aria-hidden="true"></i></div>
+
+  <div class="journal-grid">
+    <article class="journal-card" data-aos="fade-up" data-aos-delay="0">
+      <a class="journal-card-image" href="#local-beans" aria-label="Read about our local coffee suppliers">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=85" alt="Coffee beans being carefully sorted" loading="lazy">
+      </a>
+      <div class="journal-card-copy">
+        <p class="story-meta"><span>PEOPLE &amp; PLACE</span><span>4 MIN READ</span></p>
+        <h2 id="local-beans">Behind every bean, a pair of hands.</h2>
+        <p>Our coffee starts long before it reaches the grinder. Meet the growers and local suppliers whose care shapes the flavor, quality, and character of every cup.</p>
+        <h3>Quality has a source</h3>
+        <p>We look for thoughtful growing practices, careful harvesting, and partners who can tell us exactly where their beans come from. Knowing the people behind our ingredients helps us serve them with the respect they deserve.</p>
+        <p class="story-signoff">A great cup connects the person who grew it to the person enjoying it.</p>
+      </div>
     </article>
 
-    <article class="post">
-      <h2>Behind the Beans: Our Local Suppliers</h2>
-      <p class="meta">Posted on June 25, 2025</p>
-      <p>We believe in sourcing the best beans from trusted local farmers. Meet the amazing people behind the quality coffee you enjoy every day at Café Bliss.</p>
-      <a href="#">Read More</a>
-    </article>
-
-    <article class="post">
-      <h2>New Seasonal Menu – Now Brewing!</h2>
-      <p class="meta">Posted on June 10, 2025</p>
-      <p>Check out our new seasonal specials — from spiced lattes to freshly baked treats. Come in and taste what’s new this month!</p>
-      <a href="#">Read More</a>
+    <article class="journal-card" data-aos="fade-up" data-aos-delay="140">
+      <a class="journal-card-image" href="#seasonal-table" aria-label="Read about the seasonal menu">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85" alt="Freshly prepared coffee ready to enjoy" loading="lazy">
+      </a>
+      <div class="journal-card-copy">
+        <p class="story-meta"><span>SEASONAL NOTES</span><span>3 MIN READ</span></p>
+        <h2 id="seasonal-table">A little something for the changing season.</h2>
+        <p>As the days shift, so do the flavors we reach for. Our seasonal menu pairs comforting spices, fresh bakes, and familiar favorites made for sharing.</p>
+        <h3>Comfort, with a twist</h3>
+        <p>Look for warm notes in the cup, pastries fresh from the oven, and small specials inspired by what feels good right now. Ask our team what they’re enjoying; the best recommendation often comes with a story.</p>
+        <p class="story-signoff">Come by, find a favorite, and make a little time for yourself.</p>
+      </div>
     </article>
   </div>
-</section>
+</main>
 
 
   <footer class="footer">
@@ -98,8 +135,8 @@
       <h3>Contact Info</h3>
       <ul class="contact-info">
         <li><i class="fas fa-map-marker-alt"></i>C/50 Yatigammana,Manikdiwela</li>
-        <li><i class="fab fa-whatsapp"></i>+94 702379757</li>
-        <li><i class="fas fa-phone"></i>+94 702379757/+94 720972648</li>
+        <li><i class="fab fa-whatsapp"></i>+94 740 708 706</li>
+        <li><i class="fas fa-phone"></i>+94 740 708 706/+94 720 972 648</li>
         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=danilkaekanayake@gmail.com&su=Hello&body=I%20visited%20your%20portfolio" class="email" aria-label="Email"><i class="fas fa-envelope"></i>Hello@Cafebliss.com</a></li>
         <li><i class="fas fa-clock"></i> Mon-Fri: 6:00 AM – 9:00 PM<br>Sat-Sun: 7:00 AM – 10:00 PM</li>
       </ul>
@@ -128,7 +165,11 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1200 });
+    AOS.init({
+      duration: 850,
+      once: true,
+      disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
   </script>
   <script src="Cafe.js"></script>
 </body>

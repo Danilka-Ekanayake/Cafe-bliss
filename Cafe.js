@@ -39,10 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Hide loading screen after 2.8s (2s delay + 0.8s fade animation)
-  setTimeout(() => {
-    loadingScreen.classList.add('hidden');
-  }, 2800);
+  if (loadingScreen) {
+    // Hide loading screen after 2.8s (2s delay + 0.8s fade animation)
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 2800);
+  }
 });
 
 // Example JavaScript: Smooth scroll or interaction enhancements
@@ -75,32 +77,40 @@ const hamburger = document.createElement('div');
 hamburger.classList.add('hamburger');
 hamburger.innerHTML = '<span></span><span></span><span></span>';
 
-document.querySelector('.header').appendChild(hamburger);
+const header = document.querySelector('.header');
+if (header && !header.querySelector('.hamburger')) {
+  header.appendChild(hamburger);
+}
 
 const nav = document.querySelector('.nav');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('nav-active');
-  hamburger.classList.toggle('toggle');
+if (nav && hamburger) {
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    hamburger.classList.toggle('toggle');
+  });
+}
+
+const navLinks = document.querySelectorAll('.nav a');
+const currentUrl = window.location.pathname.split('/').pop();
+
+navLinks.forEach(link => {
+  const linkHref = link.getAttribute('href');
+  if (linkHref === currentUrl || linkHref === '') {
+    link.classList.add('active');
+  }
 });
 
-  const navLinks = document.querySelectorAll('.nav a');
-  const currentUrl = window.location.pathname.split('/').pop();
-
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentUrl || linkHref === '') {
-      link.classList.add('active');
-    }
-  });
 document.addEventListener("DOMContentLoaded", () => {
   const greetingElement = document.getElementById("greeting");
   const dateElement = document.getElementById("date");
-  const greetingContainer = document.getElementById("greeting-container");
+
+  if (!greetingElement || !dateElement) {
+    return;
+  }
 
   const now = new Date();
   const hours = now.getHours();
 
-  // Greeting logic
   if (hours >= 0 && hours < 12) {
     greetingElement.textContent = "Good Morning! Sir/ma'am";
   } else if (hours >= 12 && hours < 18) {
@@ -108,22 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     greetingElement.textContent = "Good Evening! Sir/ma'am";
   }
-  /*customer review*/
-  const swiper = new Swiper('.review-swiper', {
-    loop: true,
-    slidesPerView: 1, 
-    spaceBetween: 20,
-    centeredSlides: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-  // Date display
+
   const formattedDate = now.toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -137,9 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let hasAnimated = false;
 
   function animateStats() {
-    if (hasAnimated) return;
+    if (hasAnimated || !counters.length) return;
 
     const section = document.getElementById('stats');
+    if (!section) return;
+
     const sectionTop = section.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 

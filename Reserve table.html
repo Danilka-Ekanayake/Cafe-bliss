@@ -42,31 +42,66 @@
       <p>Enjoy a delightful experience at Café Bliss</p>
     </div>
   </section>
-<main>
-    <section class="reservation" data-aos="fade-up">
-      <h2>Book a Table</h2>
+<main class="reservation-page">
+  <section class="booking-shell" data-aos="fade-up">
+    <div class="booking-visual">
+      <div class="booking-visual-content">
+        <p class="eyebrow">Reserve your perfect moment</p>
+        <h2>Your café getaway starts here.</h2>
+        <p>Whether it is a slow morning coffee, a date night, or a family brunch, we will create the perfect table for your plans.</p>
+        <ul class="booking-features">
+          <li><i class="fas fa-check-circle"></i> Cozy indoor and terrace seating</li>
+          <li><i class="fas fa-check-circle"></i> Warm hospitality and quick service</li>
+          <li><i class="fas fa-check-circle"></i> Curated brunch and evening menus</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reservation-card">
+      <div class="card-header">
+        <span class="pill">Book a table</span>
+        <h3>Plan your visit</h3>
+      </div>
+
       <form class="reservation-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <div class="field-row">
+          <div class="field-block">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <div class="field-block">
+            <label for="guests">Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" value="2" required />
+          </div>
+        </div>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+        <div class="field-row">
+          <div class="field-block">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
 
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" required />
+          <div class="field-block">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+        </div>
 
-        <label for="time">Time</label>
-        <input type="time" id="time" name="time" required />
+        <div class="field-block">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+        </div>
 
-        <label for="guests">Number of Guests</label>
-        <input type="number" id="guests" name="guests" min="1" max="20" value="2" required />
+        <div class="field-block">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+        </div>
 
         <button type="submit">Reserve Now</button>
       </form>
-    </section>
+    </div>
+  </section>
 </main> 
 <footer class="footer">
   <div class="footer-container">
@@ -105,8 +140,8 @@
       <h3>Contact Info</h3>
       <ul class="contact-info">
         <li><i class="fas fa-map-marker-alt"></i>C/50 Yatigammana,Manikdiwela</li>
-        <li><i class="fab fa-whatsapp"></i>+94 702379757</li>
-        <li><i class="fas fa-phone"></i>+94 702379757/+94 720972648</li>
+        <li><i class="fab fa-whatsapp"></i>+94 740 708 706</li>
+        <li><i class="fas fa-phone"></i>+94 740 708 706/+94 720 972 648</li>
         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=danilkaekanayake@gmail.com&su=Hello&body=I%20visited%20your%20portfolio" class="email" aria-label="Email"><i class="fas fa-envelope"></i>Hello@Cafebliss.com</a></li>
         <li><i class="fas fa-clock"></i> Mon-Fri: 6:00 AM – 9:00 PM<br>Sat-Sun: 7:00 AM – 10:00 PM</li>
       </ul>
