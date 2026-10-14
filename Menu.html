@@ -9,7 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
-<body>
+<body class="menu-page">
 
   <header class="header" data-aos="fade-down">
     <div class="logo">
@@ -20,7 +20,6 @@
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="Menu.html">Menu</a>
-      <a href="#vegan">Vegan</a>
       <a href="Gallery.html">Gallery</a>
       <a href="About.html">About</a>
       <a href="Blog.html">Blog</a>
@@ -33,13 +32,18 @@
   </header>
     <section class="Menu-hero">
     <div class="hero-content" data-aos="fade-up">
-      <h1>Our Menu</h1>
-      <p>“Crafted with love and inspired by comfort, our menu brings together cozy classics and fresh favorites to make every bite feel like home.”</p> 
-    </div>
-  </section>
+        <span class="menu-eyebrow">GOOD FOOD. BETTER MOODS.</span>
+        <h1>Our Menu</h1>
+        <p>“Crafted with love and inspired by comfort, our menu brings together cozy classics and fresh favorites to make every bite feel like home.”</p>
+        <a class="menu-hero-link" href="#signature">Explore the menu <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </section>
 <section id="menu" class="menu" data-aos="fade-up">
-  <h2>Our Signature Dishes</h2>
-  <p>"From our kitchen to your table, these signature dishes are crafted to bring cozy comfort and soulful flavor in every bite."</p>
+    <div class="menu-intro">
+      <span class="menu-eyebrow">MADE FOR YOUR MOMENT</span>
+      <h2 id="signature">Our Signature Dishes</h2>
+      <p>From our kitchen to your table, these signature dishes bring cozy comfort and soulful flavor in every bite.</p>
+    </div>
  <div class="menu-grid">
     <div class="menu-item">
       <div class="menu-img-wrapper">
@@ -61,9 +65,12 @@
     </div>
   </div>
   <br>
-        <h2>Coffee & Espresso</h2>
-        <p>“From smooth sips to bold brews, our coffee and espresso are crafted with care to awaken your senses and cozy up your day.”</p>  
-        <h3>Hot Beverages</h3>
+        <div class="menu-intro menu-section-intro">
+          <span class="menu-eyebrow">THE DAILY RITUAL</span>
+          <h2 id="coffee">Coffee &amp; Espresso</h2>
+          <p>From smooth sips to bold brews, our coffee and espresso are crafted with care to awaken your senses and cozy up your day.</p>
+        </div>
+        <h3 id="hot">Hot Beverages</h3>
         <br>
         <div class="menu-grid">
             <div class="menu-item" data-aos="fade-up">
@@ -95,8 +102,11 @@
                 <p>Hot Chocolate- $4.00</p>
             </div>
         </div>
-        <h2>Cold Beverages</h2>
-        <h3>Dairy-Based Beverages</h3>
+        <div class="menu-intro menu-section-intro">
+          <span class="menu-eyebrow">COOL DOWN, SIP SLOW</span>
+          <h2 id="cold">Cold Beverages</h2>
+        </div>
+        <h3 id="dairy">Dairy-Based Beverages</h3>
         <div class="menu-grid">
             <div class="menu-item" data-aos="fade-up">
                 <img src="https://images.unsplash.com/photo-1527678357412-ef45dfbd9ecc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Creamy cappuccino">
@@ -119,7 +129,7 @@
                 <p>Iced Chai Latte - $4.00</p>
             </div>
         </div>    
-            <h3>Non Dairy-Based Beverages</h3>
+            <h3 id="plant-based">Non-Dairy Beverages</h3>
             <div class="menu-grid">
             <div class="menu-item" data-aos="fade-up">
                 <img src="https://vibrantlygfree.com/wp-content/uploads/2023/07/iced-mocha-1.jpg" alt="Creamy cappuccino">
@@ -135,8 +145,11 @@
             </div>
         </div>
 
-        <h2>Sweet cakes & pastries</h2> 
-        <p>“From flaky layers to creamy centers, our sweet treats are the perfect match for your coffee — and your cravings.”</p> 
+        <div class="menu-intro menu-section-intro">
+          <span class="menu-eyebrow">A LITTLE SOMETHING SWEET</span>
+          <h2 id="sweet">Cakes &amp; Pastries</h2>
+          <p>From flaky layers to creamy centers, our sweet treats are the perfect match for your coffee — and your cravings.</p>
+        </div>
         <div class="menu-grid">
             <div class="menu-item" data-aos="fade-up">
                 <img src="https://atreatsaffair.com/wp-content/uploads/2015/05/chocolate-croissant-recipe-3.jpg" alt="Creamy cappuccino">
@@ -176,8 +189,11 @@
             </div>
         </div>
            
-        <h2>savory pastries</h2>
-        <p>“Flaky, golden, and filled with hearty goodness — our savory pastries are the perfect comfort bite, any time of day.”</p>
+        <div class="menu-intro menu-section-intro">
+          <span class="menu-eyebrow">SAVORY COMFORT</span>
+          <h2 id="savory">Savory Pastries</h2>
+          <p>Flaky, golden, and filled with hearty goodness — the perfect comfort bite, any time of day.</p>
+        </div>
             <div class="menu-grid">  
         <div class="menu-item" data-aos="fade-up">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Xzqp9EAJ74ljG2Q4s1tlfx-WhCyuWDhqnG7r5rBdEQDWH5WeNlk9ze7b8Yx_N_UN4mM&usqp=CAU" alt="Creamy cappuccino">
